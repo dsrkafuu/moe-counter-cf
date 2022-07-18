@@ -56,10 +56,7 @@ export async function get(req, event) {
     _length = 7;
   }
   // render
-  let pixelated = false;
-  if (req.query.render === 'pixelated') {
-    pixelated = true;
-  }
+  let pixelated = req.query.render ? req.query.render === 'pixelated' : settings.defaults.render === 'pixelated';
 
   // get times from KV and set time asynchronously (no await)
   const count = Number.parseInt(await KV.get(id)) || 0;
