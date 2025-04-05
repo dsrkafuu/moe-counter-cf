@@ -71,6 +71,12 @@ DELETE https://count.dsrkafuu.net/api/{id}
 4. 修改 `settings.json` 来调整设置
 5. 使用 `wrangler publish` 编译并发布 worker
 
+<a href="https://mp.weixin.qq.com/s/japKYq1NpsNkwq5bE8Mg1Q" target="_blank" style="font-size: 18px; color: red;">## 小白教程(推荐)</a>
+1. 在 Cloudflare Workers 中创建一个 worker
+2. 复制 moe-counter-cf/blob/master/worker.js 粘贴
+3. 完成
+
+
 ## Credits
 
 - [A-SOUL](https://space.bilibili.com/703007996)
