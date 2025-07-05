@@ -67,13 +67,11 @@ DELETE https://count.dsrkafuu.net/api/{id}
 
 ## 自行部署
 
-0. Fork 这个项目
 1. 在 Cloudflare Workers 中创建一个 worker
 2. 在 Cloudflare Workers KV 中创建一个 store
 3. 使用模板 `wrangler.example.json` 创建你自己的 `wrangler.json`
 4. 修改 `settings.json` 来调整设置
-5. 绑定你的 GitHub 仓库到你的 Cloudflare Workers worker
-6. 推送一次代码触发你的 worker 进行部署
+5. 使用 `wrangler login && wrangler deploy` 编译并发布 worker
 
 ## Credits
 
