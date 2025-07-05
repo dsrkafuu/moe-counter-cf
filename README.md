@@ -68,11 +68,13 @@ All endpoints need `Authorization: {secret}` in header configured in `settings.j
 
 ## Self-hosting
 
+0. Fork this project
 1. Create a Cloudflare Workers worker
 2. Create a Cloudflare Workers KV store
-3. Create your own `wrangler.toml` based on the `wrangler.example.toml`
+3. Create your own `wrangler.json` based on the `wrangler.example.json`
 4. Modify `settings.json` in your preferred way
-5. Build the worker and publish it using `wrangler publish`
+5. Bind your GitHub repo to Cloudflare Workers worker
+6. Trigger auto deployment by pushing to your GitHub repo
 
 ## Credits
 
