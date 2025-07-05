@@ -53,7 +53,9 @@ GET https://count.dsrkafuu.net/api/{id}
 DELETE https://count.dsrkafuu.net/api/{id}
 ```
 
-公共计数器的 DELETE 接口默认不开启。
+公共计数器的 PUT/DELETE 接口默认不开启。
+
+所有接口需要在 `settings.json` 中配置的 `secret` 作为 `Authorization` 的值。
 
 **HTML 和 Markdown**
 

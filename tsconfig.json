@@ -1,0 +1,9 @@
+{
+  "extends": "@dsrca/config/tsconfig",
+  "compilerOptions": {
+    "module": "esnext",
+    "baseUrl": "."
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

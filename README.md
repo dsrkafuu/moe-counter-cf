@@ -50,10 +50,13 @@ Make a pull request to add your id in `settings.json` to use the free public cou
 
 ```
 GET https://count.dsrkafuu.net/api/{id}
+PUT https://count.dsrkafuu.net/api/{id}
 DELETE https://count.dsrkafuu.net/api/{id}
 ```
 
-DELETE is not enabled in public counter.
+PUT/DELETE is not enabled in public counter.
+
+All endpoints need `Authorization: {secret}` in header configured in `settings.json`.
 
 **HTML and Markdown**
 

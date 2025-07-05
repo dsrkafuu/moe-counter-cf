@@ -5,7 +5,9 @@
     "render": "auto"
   },
   "api": {
+    "secret": "a84feff0-5fde-41d1-8812-c9dca3cc9e1a",
     "get": true,
+    "put": false,
     "delete": false
   },
   "index": {
@@ -14,6 +16,7 @@
   "ids": {
     "dsrkafuu:demo": "Demo for GitHub & preview site.",
     "dsrkafuu:home": "Personal blog & GitHub page.",
-    "dsrkafuu:itasha": "For Itasha page counter usage."
+    "dsrkafuu:itasha": "For itasha page counter usage."
+
   }
 }
