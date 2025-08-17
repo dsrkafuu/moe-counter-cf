@@ -2,7 +2,8 @@
   "defaults": {
     "theme": "gelbooru",
     "length": 7,
-    "render": "pixelated"
+    "render": "pixelated",
+    "darkmode": "auto"
   },
   "api": {
     "secret": "a84feff0-5fde-41d1-8812-c9dca3cc9e1a",
@@ -17,6 +18,5 @@
     "dsrkafuu:demo": "Demo for GitHub & preview site.",
     "dsrkafuu:home": "Personal blog & GitHub page.",
     "dsrkafuu:itasha": "For itasha page counter usage."
-
   }
 }
