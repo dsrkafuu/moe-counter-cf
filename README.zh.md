@@ -41,7 +41,7 @@ https://count.dsrkafuu.net/{id}?theme={asoul,gelbooru,moebooru,rule34}&render={a
 ```
 
 1. `{id}`：任何长度在 1-256 之间的字符串 (允许的符号有 `a-zA-Z0-9:.@_-`)
-2. `{&theme}`：`asoul`、`gelbooru`、`moebooru`、`rule34` 和两个其他的主题 (默认：`gelbooru`)
+2. `{&theme}`：`gelbooru`、`moebooru`、`rule34` 和其他的主题 (默认：`gelbooru`)
 3. `{&length}`：`1-10` 之间的数字 (默认：`7`) 或 `auto`
 4. `{&render}`：`auto` 或 `pixelated` (默认：`pixelated`)
 5. `{&darkmode}`: 夜间模式配置，`light`、`dark` 或 `auto` (默认：`auto`)

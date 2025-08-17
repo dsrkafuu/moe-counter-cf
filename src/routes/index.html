@@ -13,11 +13,18 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/dsr-design@3.5.1/css/reset.css"
+      href="https://cdn.jsdelivr.net/npm/bamboo.css@1.4.0/dist/bamboo.min.css"
     />
     <title>Moe Counter CF</title>
     <style>
       * {
+        font-family: 'Inter', sans-serif;
+      }
+      header,
+      main,
+      footer,
+      h1,
+      h2 {
         text-align: center;
       }
       h1 {
@@ -54,11 +61,28 @@
       span:hover {
         background-color: #7793cc;
         color: #fff;
+        text-decoration: none;
       }
       footer {
         font-size: 14px;
         margin: 16px;
         margin-bottom: 32px;
+      }
+      input,
+      select {
+        width: 150px !important;
+        min-width: 150px !important;
+      }
+      #result {
+        text-align: center;
+      }
+      #result span {
+        margin: 0;
+      }
+      #link {
+        text-align: left;
+        background: var(--b-bg-2);
+        padding: 8px 12px;
       }
     </style>
   </head>
@@ -85,6 +109,70 @@
     <footer>
       v${version} | Copyright &copy; 2020 journey-ad, 2022 DSRKafuU
     </footer>
+    <div>
+      <h2>Counter Generator</h2>
+      <table>
+        <tr>
+          <th>Param</th>
+          <th>Description</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>Locked in demo, deploy your own to change</td>
+          <td>
+            <input id="id" type="text" value="dsrkafuu:demo" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td><code>theme</code></td>
+          <td>Counter theme, default is <code>gelbooru</code></td>
+          <td>
+            <select id="themes">
+              <option value="gelbooru">gelbooru</option>
+              <option value="green">green</option>
+              <option value="moebooru">moebooru</option>
+              <option value="rule34">rule34</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><code>length</code></td>
+          <td>Minimum length of counter, between <code>1-10</code></td>
+          <td>
+            <input id="length" type="number" min="1" max="10" value="7" />
+          </td>
+        </tr>
+        <tr>
+          <td><code>render</code></td>
+          <td>Render mode, default is <code>pixelated</code></td>
+          <td>
+            <select id="render">
+              <option value="pixelated">pixelated</option>
+              <option value="auto">auto</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><code>darkmode</code></td>
+          <td>Dark mode support, default is <code>auto</code></td>
+          <td>
+            <select id="darkmode">
+              <option value="auto">auto</option>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <div id="result">
+        <span id="generate">Generate Link</span>
+        <div id="link" style="margin: 1.5rem 0">
+          <code></code>
+        </div>
+        <div id="preview" style="margin: 1.5rem 0"></div>
+      </div>
+    </div>
     <script>
       (function () {
         var img = document.querySelector('img');
@@ -99,6 +187,34 @@
           }
           img.src = img.src.replace(/\?theme=.+/, '?theme=' + next + '&add=0');
         });
+
+        var generate = document.getElementById('generate');
+        function goGen(scroll) {
+          var res = 'https://count.dsrkafuu.net/';
+          var id = document.getElementById('id').value;
+          res += id;
+          var theme = document.getElementById('themes').value;
+          res += '?theme=' + theme;
+          var length = document.getElementById('length').value;
+          res += '&length=' + length;
+          var render = document.getElementById('render').value;
+          res += '&render=' + render;
+          var darkmode = document.getElementById('darkmode').value;
+          res += '&darkmode=' + darkmode;
+
+          document.getElementById('link').innerHTML = `<code>${res}</code>`;
+          document.getElementById('preview').innerHTML =
+            `<img src="${res + `&add=0&t=${Date.now()}`}" />`;
+          if (scroll !== false) {
+            setTimeout(function () {
+              document.getElementById('preview').scrollIntoView({
+                behavior: 'smooth',
+              });
+            });
+          }
+        }
+        generate.addEventListener('click', goGen);
+        goGen(false);
       })();
     </script>
   </body>

@@ -41,7 +41,7 @@ https://count.dsrkafuu.net/{id}?theme={asoul,gelbooru,moebooru,rule34}&render={a
 ```
 
 1. `{id}`: Any custom string between 1-256 chars (`a-zA-Z0-9:.@_-` allowed)
-2. `{&theme}`: `asoul`, `gelbooru`, `moebooru`, `rule34` and two other themes (default: `gelbooru`)
+2. `{&theme}`: `gelbooru`, `moebooru`, `rule34` and other themes (default: `gelbooru`)
 3. `{&length}`: Number between `1-10` (default: `7`) or string `auto`
 4. `{&render}`: `auto` or `pixelated` (default: `pixelated`)
 5. `{&darkmode}`: Dark mode support, `light`, `dark` or `auto` (default: `auto`)

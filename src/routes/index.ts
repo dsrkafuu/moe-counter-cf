@@ -11,7 +11,10 @@ export default (app: Hono) => {
       '/',
       cache({
         cacheName: 'index',
-        cacheControl: 'public, max-age=3600',
+        cacheControl:
+          import.meta.env.MODE === 'development'
+            ? 'no-cache'
+            : 'public, max-age=3600',
       }),
       (c) => {
         const rendered = index.replace('${version}', pkg.version);
