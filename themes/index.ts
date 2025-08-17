@@ -31,6 +31,17 @@ import gh_7 from './gelbooru-h/7.png?inline';
 import gh_8 from './gelbooru-h/8.png?inline';
 import gh_9 from './gelbooru-h/9.png?inline';
 
+import gr_0 from './green/0.gif?inline';
+import gr_1 from './green/1.gif?inline';
+import gr_2 from './green/2.gif?inline';
+import gr_3 from './green/3.gif?inline';
+import gr_4 from './green/4.gif?inline';
+import gr_5 from './green/5.gif?inline';
+import gr_6 from './green/6.gif?inline';
+import gr_7 from './green/7.gif?inline';
+import gr_8 from './green/8.gif?inline';
+import gr_9 from './green/9.gif?inline';
+
 import mb_0 from './moebooru/0.gif?inline';
 import mb_1 from './moebooru/1.gif?inline';
 import mb_2 from './moebooru/2.gif?inline';
@@ -79,6 +90,11 @@ export default {
     width: 68,
     height: 150,
     images: [gh_0, gh_1, gh_2, gh_3, gh_4, gh_5, gh_6, gh_7, gh_8, gh_9],
+  },
+  green: {
+    width: 45,
+    height: 100,
+    images: [gr_0, gr_1, gr_2, gr_3, gr_4, gr_5, gr_6, gr_7, gr_8, gr_9],
   },
   moebooru: {
     width: 45,
