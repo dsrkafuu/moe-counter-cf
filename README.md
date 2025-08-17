@@ -44,8 +44,8 @@ https://count.dsrkafuu.net/{id}?theme={asoul,gelbooru,moebooru,rule34}&render={a
 2. `{&theme}`: `asoul`, `gelbooru`, `moebooru`, `rule34` and two other themes (default: `gelbooru`)
 3. `{&length}`: Number between `1-10` (default: `7`) or string `auto`
 4. `{&render}`: `auto` or `pixelated` (default: `pixelated`)
-5. `{&add}`: Controls whether make the counter count or not (default: `1`)
-6. `{&darkmode}`: Dark mode support, `light`, `dark` or `auto` (default: `auto`)
+5. `{&darkmode}`: Dark mode support, `light`, `dark` or `auto` (default: `auto`)
+6. (Uncommon) `{&add}`: Controls whether make the counter count or not (default: `1`)
 
 You can custmize the default bahaviors by [self-hosting the counter](#self-hosting).
 

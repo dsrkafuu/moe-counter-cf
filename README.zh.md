@@ -44,7 +44,8 @@ https://count.dsrkafuu.net/{id}?theme={asoul,gelbooru,moebooru,rule34}&render={a
 2. `{&theme}`：`asoul`、`gelbooru`、`moebooru`、`rule34` 和两个其他的主题 (默认：`gelbooru`)
 3. `{&length}`：`1-10` 之间的数字 (默认：`7`) 或 `auto`
 4. `{&render}`：`auto` 或 `pixelated` (默认：`pixelated`)
-5. `{&add}`：控制计数器是否增加 (默认：`1`)
+5. `{&darkmode}`: 夜间模式配置，`light`、`dark` 或 `auto` (默认：`auto`)
+6. (不常用) `{&add}`：控制计数器是否增加 (默认：`1`)
 
 你可以通过[自行部署](#自行部署)来自定义默认行为。
 

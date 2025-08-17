@@ -1,15 +1,20 @@
-import settings from '../../settings.json';
 import themes from '../../themes';
 import { Hono, Context } from 'hono';
 import { env } from 'hono/adapter';
 import { KVNamespace } from '@cloudflare/workers-types';
-import { validateID } from '../utils';
+import {
+  validateDarkmode,
+  validateID,
+  validateLength,
+  validateRender,
+  validateTheme,
+} from '../utils';
 
 function genImage(
   count: number,
   theme: string,
   length: number | string,
-  pixelated: boolean,
+  render: string,
   darkmode: string
 ) {
   let nums;
@@ -29,7 +34,7 @@ function genImage(
   }, '');
 
   let style = '';
-  if (pixelated) {
+  if (render !== 'auto') {
     style += 'svg{image-rendering:pixelated;}';
   }
   if (darkmode === 'light') {
@@ -53,36 +58,21 @@ export default (app: Hono) => {
     // id
     const id = validateID(c.req.param('id'));
     const { KV } = env<{ KV: KVNamespace }>(c);
-    let { theme } = c.req.query();
-    const { length, add, render, darkmode } = c.req.query();
-    // theme
-    if (!theme || !themes[theme as keyof typeof themes]) {
-      theme = settings.defaults.theme;
-    }
-    // length
-    let _length = length || settings.defaults.length;
-    if (length === 'auto') {
-      _length = 'auto';
-    } else if (!+length || +length <= 0 || +length > 10) {
-      _length = 7;
-    }
-    // render
-    let pixelated = true;
-    if (settings.defaults.render === 'auto' || render === 'auto') {
-      pixelated = false;
-    }
-    // darkmode
-    const _darkmode = darkmode || settings.defaults.darkmode;
+    const { theme, length, add, render, darkmode } = c.req.query();
+    const _theme = validateTheme(theme);
+    const _length = validateLength(length);
+    const _render = validateRender(render);
+    const _darkmode = validateDarkmode(darkmode);
 
     // get times from KV and set time asynchronously (no await)
     const count = Number.parseInt((await KV.get(id)) || '0') || 0;
     let image: string;
     if (add !== '0') {
-      image = genImage(count + 1, theme, _length, pixelated, _darkmode);
+      image = genImage(count + 1, _theme, _length, _render, _darkmode);
       // do not quit worker before setting time
       c.executionCtx.waitUntil(KV.put(id, (count + 1).toString()));
     } else {
-      image = genImage(count, theme, _length, pixelated, _darkmode);
+      image = genImage(count, _theme, _length, _render, _darkmode);
     }
 
     return c.body(image, {
