@@ -77,7 +77,7 @@ All endpoints need `Authorization: {secret}` in header configured in `settings.j
 2. Create a Cloudflare Workers KV store
 3. Create your own `wrangler.json` based on the `wrangler.example.json`
 4. Modify `settings.json` in your preferred way
-5. Build the worker and publish it using `wrangler login && wrangler deploy`
+5. Build the worker and publish it using `npm run build && npx wrangler login && npx wrangler deploy`
 
 ## Credits
 

@@ -76,7 +76,7 @@ DELETE https://count.dsrkafuu.net/api/{id}
 2. 在 Cloudflare Workers KV 中创建一个 store
 3. 使用模板 `wrangler.example.json` 创建你自己的 `wrangler.json`
 4. 修改 `settings.json` 来调整设置
-5. 使用 `wrangler login && wrangler deploy` 编译并发布 worker
+5. 使用 `npm run build && npx wrangler login && npx wrangler deploy` 编译并发布 worker
 
 ## Credits
 
