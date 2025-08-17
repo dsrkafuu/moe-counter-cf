@@ -6,6 +6,12 @@ Fork of Moe Counter for fast global access powered by Cloudflare Workers.
 
 [Original Project](https://github.com/journey-ad/Moe-counter) | [Cloudflare Workers](https://workers.cloudflare.com/) | [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
 
+<p style="color: red">
+To keep the project simple, this repo will not provide as much themes as the original project by default and will not receive theme contributions. Please fork this repo to add your own themes for your usage.
+</p>
+
+Upstream themes: [journey-ad/Moe-Counter](https://github.com/journey-ad/Moe-Counter/tree/master/assets/theme)
+
 ## Demo
 
 [![Gelbooru](https://count.dsrkafuu.net/dsrkafuu:demo)](https://count.dsrkafuu.net/dsrkafuu:demo)

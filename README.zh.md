@@ -6,6 +6,12 @@
 
 [原项目](https://github.com/journey-ad/Moe-counter) | [Cloudflare Workers](https://workers.cloudflare.com/) | [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
 
+<p style="color: red">
+为了保持项目简介，这个仓库不提供全部的默认主题，且不接受提交主题。使用时请 fork 这个仓库来添加你自己的主题。
+</p>
+
+上游主题：[journey-ad/Moe-Counter](https://github.com/journey-ad/Moe-Counter/tree/master/assets/theme)
+
 ## 预览
 
 [![Gelbooru](https://count.dsrkafuu.net/dsrkafuu:demo)](https://count.dsrkafuu.net/dsrkafuu:demo)
