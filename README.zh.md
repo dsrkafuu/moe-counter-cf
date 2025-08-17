@@ -27,9 +27,9 @@
 
 [![Moebooru](https://count.dsrkafuu.net/dsrkafuu:demo?theme=moebooru&length=auto&add=0)](https://count.dsrkafuu.net/dsrkafuu:demo?theme=moebooru&length=auto)
 
-**Rule 34 (with `theme=rule34&render=pixelated`)**
+**Rule 34 (with `theme=rule34&render=auto`)**
 
-[![Rule 34](https://count.dsrkafuu.net/dsrkafuu:demo?theme=rule34&render=pixelated&add=0)](https://count.dsrkafuu.net/dsrkafuu:demo?theme=rule34)
+[![Rule 34](https://count.dsrkafuu.net/dsrkafuu:demo?theme=rule34&render=auto&add=0)](https://count.dsrkafuu.net/dsrkafuu:demo?theme=rule34)
 
 </details>
 
@@ -45,7 +45,7 @@ https://count.dsrkafuu.net/{id}?theme={asoul,gelbooru,moebooru,rule34}&render={a
 1. `{id}`：任何长度在 1-256 之间的字符串 (允许的符号有 `a-zA-Z0-9:.@_-`)
 2. `{&theme}`：`asoul`、`gelbooru`、`moebooru`、`rule34` 和两个其他的主题 (默认：`gelbooru`)
 3. `{&length}`：`1-10` 之间的数字 (默认：`7`) 或 `auto`
-4. `{&render}`：`auto` 或 `pixelated` (默认：`auto`)
+4. `{&render}`：`auto` 或 `pixelated` (默认：`pixelated`)
 5. `{&add}`：控制计数器是否增加 (默认：`1`)
 
 你可以通过[自行部署](#自行部署)来自定义默认行为。

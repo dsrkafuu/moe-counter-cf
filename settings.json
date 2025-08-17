@@ -2,7 +2,7 @@
   "defaults": {
     "theme": "gelbooru",
     "length": 7,
-    "render": "auto"
+    "render": "pixelated"
   },
   "api": {
     "secret": "a84feff0-5fde-41d1-8812-c9dca3cc9e1a",

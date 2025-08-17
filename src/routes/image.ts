@@ -55,9 +55,12 @@ export default (app: Hono) => {
       _length = 7;
     }
     // render
-    let pixelated = settings.defaults.render === 'pixelated';
-    if (c.req.query('render') === 'pixelated') {
-      pixelated = true;
+    let pixelated = true;
+    if (
+      settings.defaults.render === 'auto' ||
+      c.req.query('render') === 'auto'
+    ) {
+      pixelated = false;
     }
 
     // get times from KV and set time asynchronously (no await)
