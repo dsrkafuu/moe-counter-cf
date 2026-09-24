@@ -6,10 +6,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="favicon.ico" sizes="48x48" type="image/x-icon" />
+    <link rel="icon" href="icon.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-icon.png" sizes="180x180" type="image/png" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500&family=Fira+Code:wght@400;500"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500&family=Cascadia+Mono:wght@400;500"
     />
     <link
       rel="stylesheet"
@@ -17,8 +19,14 @@
     />
     <title>Moe Counter CF</title>
     <style>
+      :root {
+        --b-focus: #7793cc;
+      }
       * {
         font-family: 'Inter', sans-serif;
+      }
+      code {
+        font-family: 'Cascadia Mono', monospace;
       }
       header,
       main,

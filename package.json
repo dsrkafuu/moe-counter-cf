@@ -1,6 +1,6 @@
 {
   "name": "moe-counter-cf",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "private": true,
   "description": "Fork of Moe Counter for fast global access powered by Cloudflare Workers.",
   "license": "MIT",
@@ -15,13 +15,13 @@
     "hono": "^4.13.8"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.57.1",
-    "@cloudflare/workers-types": "^5.20260922.1",
-    "@types/node": "^24.13.6",
+    "@cloudflare/vite-plugin": "^1.58.0",
+    "@cloudflare/workers-types": "^5.20260924.1",
+    "@types/bun": "^1.4.2",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
     "typescript": "^6.0.3",
     "vite": "^8.3.0",
-    "wrangler": "^4.136.1"
+    "wrangler": "^4.137.0"
   }
 }

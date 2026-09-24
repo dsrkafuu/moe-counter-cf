@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /robots.txt$
-Allow: /favicon.ico$
-Allow: /$
-Disallow: /
+Allow: /
